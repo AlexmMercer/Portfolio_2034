@@ -1,0 +1,463 @@
+/* Global styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: linear-gradient(135deg, #0f0f0f 20%, #1c1c1c 80%);
+    color: #e0e0e0;
+    line-height: 1.6;
+    padding: 20px;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* Navigation styles */
+header {
+    background-color: rgba(255, 255, 255, 0.05);
+    padding: 15px;
+    border-bottom: 2px solid #ff9800;
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+nav ul {
+    list-style-type: none;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ff9800;
+    text-decoration: none;
+    font-size: 18px;
+    letter-spacing: 1.5px;
+    transition: color 0.3s ease-in-out;
+}
+
+nav ul li a:hover {
+    color: #00e676;
+}
+
+/* Main content styles */
+main {
+    margin: 40px 0;
+    text-align: center;
+}
+
+.intro {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 40px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin-bottom: 40px;
+}
+
+.intro h1 {
+    font-size: 48px;
+    color: #ff9800;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.intro p, .intro ul {
+    font-size: 18px;
+    color: #e0e0e0;
+}
+
+.intro ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.intro ul li {
+    padding: 10px 0;
+    position: relative;
+}
+
+.intro ul li::before {
+    content: "★";
+    color: #00e676;
+    position: absolute;
+    left: -25px;
+}
+
+.achievements {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+}
+
+.achievements h2 {
+    font-size: 36px;
+    color: #00e676;
+    margin-bottom: 20px;
+    text-transform: uppercase;
+}
+
+.achievements ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.achievements ul li {
+    font-size: 18px;
+    margin-bottom: 10px;
+    position: relative;
+    padding-left: 20px;
+}
+
+.achievements ul li::before {
+    content: "➤";
+    color: #ff9800;
+    position: absolute;
+    left: 0;
+}
+
+/* Footer styles */
+footer {
+    text-align: center;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.05);
+    border-top: 2px solid #ff9800;
+    color: #e0e0e0;
+    margin-top: 40px;
+    font-size: 14px;
+}
+
+/* Hover effects for futuristic feel */
+footer p {
+    transition: color 0.3s ease-in-out;
+}
+
+footer p:hover {
+    color: #00e676;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    .intro h1 {
+        font-size: 32px;
+    }
+
+    .achievements h2 {
+        font-size: 28px;
+    }
+}
+
+/* Timeline styles */
+.timeline {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+}
+
+.timeline-container {
+    position: relative;
+    padding-left: 20px;
+    border-left: 2px solid #ff9800;
+}
+
+.timeline-item {
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.timeline-item::before {
+    content: "";
+    width: 15px;
+    height: 15px;
+    background-color: #ff9800;
+    border-radius: 50%;
+    position: absolute;
+    left: -10px;
+    top: 5px;
+}
+
+.timeline-content {
+    padding-left: 30px;
+}
+
+.timeline-content h3 {
+    font-size: 24px;
+    color: #00e676;
+    margin-bottom: 10px;
+}
+
+.timeline-content p {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+/* Skills & Technologies */
+.skills-tech {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    text-align: center;
+}
+
+.skills-tech ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.skills-tech ul li {
+    font-size: 18px;
+    color: #ff9800;
+    margin: 10px 0;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+/* Portfolio Gallery */
+.portfolio-gallery {
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+    text-align: center;
+}
+
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.gallery-item {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+
+.gallery-item:hover {
+    transform: scale(1.05);
+}
+
+.gallery-item img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+}
+
+.gallery-info {
+    padding: 20px;
+    color: #e0e0e0;
+}
+
+.gallery-info h3 {
+    color: #00e676;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.gallery-info p {
+    font-size: 16px;
+}
+
+/* Testimonials */
+.testimonials {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+    text-align: center;
+}
+
+.testimonial-item {
+    margin-bottom: 20px;
+}
+
+.testimonial-item p {
+    font-style: italic;
+    font-size: 18px;
+    color: #ff9800;
+}
+
+.testimonial-item span {
+    display: block;
+    margin-top: 10px;
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+/* Future Tech Overview */
+.tech-overview, .tech-gamification, .future-contribution {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+    text-align: center;
+}
+
+.tech-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.tech-item {
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 10px;
+    padding: 20px;
+    width: 300px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease;
+}
+
+.tech-item:hover {
+    transform: scale(1.05);
+}
+
+.tech-item h3 {
+    color: #00e676;
+    font-size: 20px;
+    margin-bottom: 10px;
+}
+
+.tech-item p {
+    font-size: 16px;
+    color: #e0e0e0;
+}
+
+.future-contribution ul {
+    list-style-type: square;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.future-contribution ul li {
+    font-size: 18px;
+    color: #ff9800;
+    margin-bottom: 10px;
+}
+
+/* Contact Form */
+.contact-form {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+}
+
+.contact-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.form-group label {
+    color: #e0e0e0;
+    font-size: 16px;
+}
+
+.form-group input, .form-group textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ff9800;
+    border-radius: 5px;
+    background-color: rgba(0, 0, 0, 0.5);
+    color: #fff;
+}
+
+.form-group input:focus, .form-group textarea:focus {
+    outline: none;
+    border-color: #00e676;
+}
+
+button[type="submit"] {
+    padding: 10px;
+    border: none;
+    background-color: #ff9800;
+    color: #fff;
+    font-size: 18px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button[type="submit"]:hover {
+    background-color: #00e676;
+}
+
+/* Social Media */
+.social-media {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding-left: 0;
+}
+
+.social-media ul li {
+    display: inline;
+    margin-right: 20px;
+}
+
+.social-media ul li a {
+    color: #ff9800;
+    font-size: 18px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.social-media ul li a:hover {
+    color: #00e676;
+}
+
+/* Bio Section */
+.bio {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.5);
+    backdrop-filter: blur(10px);
+    margin: 40px 0;
+}
+
+.bio p {
+    color: #e0e0e0;
+    font-size: 18px;
+    text-align: center;
+}
